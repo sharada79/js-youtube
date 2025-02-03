@@ -26,3 +26,25 @@ console.log(id===anotherId);
 
 console.log(typeof"sharada");
 console.log(typeof null);
+
+//***************MEMORY******************
+//(Primitive uses)Stack,(non-Primitive uses)Heap
+             //STACK
+ let myYtname= "sharadaghorpade"
+
+ let anothername = myYtname
+ anothername = "chaiaurcode"
+
+ console.log(myYtname);
+ console.log(anothername);
+            //HEAP
+ let user1 = {
+    email: "user79@gmail.com",
+    phoneno: "7499477379"
+ }
+
+ let user2 = user1
+ user2.email = "sharada79@gmail.com"
+
+console.log(user1.email);
+console.log(user2.email);
