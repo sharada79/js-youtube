@@ -16,14 +16,22 @@ function sayMyName(){
 //     console.log(number1 + number2);
 // }
 function addTwoNumbers(number1, number2){
-    let result= number1 + number2;
+    return number1 + number2;
     //OR
-    return number1 + number2
+    let result = number1 + number2
     return result
     console.log();  //after result doesn't print anything
 }
-                          //arguments
+//store in variable                     //arguments
 const result = addTwoNumbers(3,5)
-console.log("Result", result);
+console.log("Result", result);   //only prints the value
 
-             
+function LoginUserMsg(username){
+    if(username === undefined){
+        console.log("please enter a username");
+        return
+    }
+    return `${username} just loged in` //interpolation
+}
+console.log(LoginUserMsg("sharada"));
+console.log(LoginUserMsg());
