@@ -1,0 +1,58 @@
+--theory
+* JS is "single threaded"
+javascript execution context
+2 phases = memory creation phase, execution phase
+
+Global execution context banega refered by "this"
+in browser value of this = window obj
+
+Function execution context
+
+Eval execution context (in documentations like mongoose etc)
+
+let val1 = 10
+let val2 = 5
+function addnum(num1, num2){
+    let total = num1 + num2
+    return total
+}
+let result1 = addnum(val1, val2)
+let result2 = addnum(10, 2)
+
+for run a code;
+1st Global execution context banega refered by "this"
+2nd memory creation phase;
+val1 = undefined
+val2 = undefined
+addnum = defination
+result1 = undefined
+result2 = undefined
+3rd execution phase;
+val1 = 10
+val2 = 5
+addnum = [new variable envirnment and  //new executional context
+           execution thread ]  //get delete after work done
+           memory phase;
+           val1 = undefined
+           val2 = undefined
+           total = undefined
+           execution context;
+           num1 = 10
+           num2 = 5
+           total = 15
+result1 = 15   
+result2 =addnum = [new variable envirnment and
+                   execution thread ]
+                   memory phase;
+                   val1 = undefined
+                   val1 = undefined
+                   val2 = undefined
+                   total = undefined
+                   execution context;
+                   num1 = 10
+                   num2 = 2
+                   total = 12
+                   
+callStack     
+Global execution 
+LIFO
